@@ -1,0 +1,8 @@
+## https://api.census.gov/data/2020/acs/acs5/variables.html lists all the possible variable keys for the API Request
+## Below provides a DF with the ZIP Code and the Median household income.
+## Need to initialize spark session first
+##CODE
+census_API_call = requests.get('https://api.census.gov/data/2020/acs/acs5?get=NAME,B19013_001E&for=zip%20code%20tabulation%20area:*')
+census_JSON = census_API_call.json()
+census_df = spark.createDataFrame(census_JSON)
+census_df.head()
