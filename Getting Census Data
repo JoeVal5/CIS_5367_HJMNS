@@ -10,5 +10,7 @@ schema = StructType([
    StructField("Median_Income", StringType(), True),
    StructField("ZIP_Code", StringType(), True)])
 census_df = spark.createDataFrame(census_JSON[1:], schema)
-#census_df.head()
-#census_df.show(n=10)
+census_df2 = census_df.withColumn("Median_Income",census_df.Median_Income.cast(FloatType()))
+
+#census_df2.head()
+#census_df2.show(n=10)
