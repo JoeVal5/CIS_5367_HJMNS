@@ -2,7 +2,13 @@
 ## Below provides a DF with the ZIP Code and the Median household income.
 ## Need to initialize spark session first
 ##CODE
-census_API_call = requests.get('https://api.census.gov/data/2020/acs/acs5?get=NAME,B19013_001E&for=zip%20code%20tabulation%20area:*')
+census_API_call = requests.get('https://api.census.gov/data/2020/acs/acs5?get=NAME,B19013_001E&for=zip%20code%20tabulation%20area:*&key=46d133e794f5998e012ea4e0d83d6fb6085136b0')
 census_JSON = census_API_call.json()
-census_df = spark.createDataFrame(census_JSON)
-census_df.head()
+
+schema = StructType([
+   StructField("ZCTA5_Code", StringType(), True),
+   StructField("Median_Income", StringType(), True),
+   StructField("ZIP_Code", StringType(), True)])
+census_df = spark.createDataFrame(census_JSON[1:], schema)
+#census_df.head()
+#census_df.show(n=10)
