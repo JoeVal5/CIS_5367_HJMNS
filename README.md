@@ -11,7 +11,7 @@ Data is provided by  Kaggle.com
   US housing market data 2012-2021 by different geographical region
   Use the below link to download the zip_code_market_tracker.tsv000
   https://www.kaggle.com/thuynyle/redfin-housing-market-data?select=zip_code_market_tracker.tsv000
-# shared file location on google drive https://drive.google.com/file/d/1b-Z0Tt--ioLGhPTNwHVKyYY7mS7ynRJs/view?usp=sharing
+  shared file location on google drive https://drive.google.com/file/d/1b-Z0Tt--ioLGhPTNwHVKyYY7mS7ynRJs/view?usp=sharing
 
   For using the exact line of code from repository to read the Refin data, after downloading the data set in the local computer from Kaggle
   You need to create a folder named "data" in the google drive and manually upload the data set in that "data" folder. or modify the file path in the correct read.csv(line
@@ -23,3 +23,5 @@ currently the Census data only allows a pull from 1 year at a time, so the code 
 https://www.census.gov/programs-surveys/acs/data.html explains the data and allows viewing the records via web portal
 
 Currently the project has some data initialization and manipulation to describe the data we are working with. 
+
+Did some rough linear regression on overal change in Median Income by ZIP and Change in Median Sales Price by ZIP. The results didn't show a strong correlation but will continue exploring datasets/areas that may provide more insight. Whether by state or which zip in the state etc. 
