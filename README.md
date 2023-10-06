@@ -1,5 +1,5 @@
-# CIS_5367_HJMNS
-Machine Learning Course 5367 Spring 2022 Project
+# Investment Houisng Property Value Prediction
+•	Developed model to predict top five investment locations in the USA based on historic housing and income data using Pyspark and various machine learning tools.
 
 Purpose:
   The purpose of this repository is to document the Machine Learning project for team C
